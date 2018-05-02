@@ -1,4 +1,5 @@
-var socket= io.connect('http://localhost:6677',{'forceNew':true})
+//var socket= io.connect('http://localhost:6677',{'forceNew':true})
+var socket= io.connect('http://localhost:6677', {transports: ['websocket', 'polling', 'flashsocket']})
 
 socket.on('messages',function(data){
 	console.log(data)
